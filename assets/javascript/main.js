@@ -14,12 +14,12 @@ async function getData() {
 
   posts.forEach(post => {
     i++;
-    if(i = 12) {
+    if(i <= 12) {
       const title = post.title;
       const body = post.body;
       const heading = post.heading;
 
-      fetch('/assets/images/nature.jpg')
+      fetch('https://unsplash.it/300/200')
         .then(res => res.blob())
         .then(blob => {
           const newPost = document.importNode(postTemplate.content, true);
